@@ -1,0 +1,822 @@
+/*CSS*/
+
+/*BOOTSTRAP*/
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+/*PAGINA/SECCION INICIO*/
+
+html{
+
+}
+
+/* Efecto al título Darte lo mejor */
+.animate__bounce{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+  --animate-delay: 0.9s;
+}
+
+h1{
+	font-family: 'Patrick Hand', cursive; 
+	font-size: 50px;
+	text-align: center;
+}
+
+body{
+  background-color: #FFD18C;
+  text-align: center;
+}
+
+
+/* Sección Menu de navegación*/
+
+/*Flexbox de menú de navegación #FF5757*/
+.flex-container { 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color:#FF5757;
+  padding: auto;
+  width: auto;
+}
+
+
+.item {
+	display:inline-block;
+    align-self: center;
+	padding: auto;
+	background-color: none;
+	margin: auto; /*centra los items en el background del menu de navegacion*/
+	width: auto;
+	flex-grow: 
+	flex-basis:
+}
+
+.desplegable{
+	/* Cuando se pasa el mouse por encima de la lista despleble */
+	font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	line-height: 20px;
+	}
+
+
+a:active{
+      /* Mientras el usuario mantiene el click en el menu */
+	font-family: 'Patrick Hand', cursive;
+	font-size: 13px;
+	text-decoration: bold;
+	color: #FFD18C;
+}
+
+/* Boxmodeling*/
+a:active .desplegable{
+      /* Mientras el usuario mantiene el click en la lista desplegable */
+	font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	line-height: 10px;
+	display:inline-block;
+    align-self: left;
+    text-align: left;
+    width: 100%;
+    padding: 0px;
+   	margin: 0px;
+	flex-grow: 
+	flex-basis:
+}
+
+ul{
+	list-style:none;
+	color: white;
+}
+
+li{
+	display:inline-block;
+	width: 200px; /*ancho de cada item del menu de navegación + como se ve el desplegable*/
+	position: relative;
+	border: none;
+	margin: 5px; /*espacio entre cada item de la lista*/
+	color: black;
+}
+
+ul ul {
+	position: absolute;
+	display:none;
+	background-color: #FF5757;
+	text-align: left;
+}
+
+ul ul li {
+	display: inline-block;
+	width: 200%;
+	border:none;
+	z-index: 10000000;
+	text-align: left;
+}
+
+ul li:hover ul {
+	/*Cuando se pasa el mouse por encima de los items de la lista desplegable*/
+	display: block;
+	font-size: 13px;
+	font-family: 'Kumbh Sans', sans-serif; 
+}
+
+a {
+    /* Menu de navegación*/
+	font-family:'Kumbh Sans', sans-serif; /*Tipo de letra del menú*/
+	font-size: 16px; /*Tamaño letra del menú*/
+	color: #fbf8f1;
+}
+a:hover{
+	/* Cuando se pasa el mouse por encima del menu */
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 16px;
+	text-decoration:bold;
+	color: #fbd38d;
+	} 
+
+/* a:link {color: white;} enlaces no visitados*/
+/* a:visited {color:#e65a5a ;} enlaces visitados*/
+
+
+/* Fin menu de navegación*/
+
+
+/*GRIDS INICIO*/
+.grid {
+ display: grid;
+ grid-row-gap: 100px;
+ grid-column-gap: auto;
+}
+
+#divisionAreas{
+    grid-template-areas: 
+    "header header header"
+    ". destcados ."
+    "menu menu menu"
+    "pedidos pedidos pedidos"
+    "footer footer footer";
+    grid-template-columns: repeat 3(1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+     grid-row-gap: 500px;
+}
+
+#divisionAreas .area.a {grid-area: header; background-color: none; }
+#divisionAreas .area.b {grid-area: destacados; background-color: none; }
+#divisionAreas .area.c {grid-area: menu; background-color: none; }
+#divisionAreas .area.d {grid-area: pedidos; background-color: none; }
+#divisionAreas .area.e {grid-area: footer;  background-color: none;}
+
+.area {
+	display: block;
+	justify-self: center;
+	align-self: center;
+	align-items: start;
+    grid-row-gap: 100px;
+}
+
+.area:hover {
+    background-color: none;
+}
+
+/*Seccion Productos Destacados*/
+
+.destacados { 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: none;
+  padding: none;
+  width: 50%;
+  margin:10px auto;
+}
+/*Fin sección productos Destacados*/
+
+/*Seccion Conoce nuestro menú*/
+
+.flex-menu { 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: none;
+  padding: none;
+  width: 100%;
+}
+
+.item2 {
+	display:inline-block;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+	padding: 30px 5px 30px 5px;
+	background-color: #FF5757;
+	border-radius: 30px;
+	margin: 5px;
+	flex-grow: 
+	flex-basis: 
+}
+
+a:active .item2{
+      /* Mientras el usuario mantiene el click en el menu */
+	font-family: 'Patrick Hand', cursive;
+	font-size: 20px;
+	text-decoration:bold;
+	color: black;
+}
+
+a .item2{
+    /* Menu de navegación*/
+	font-family: 'Patrick Hand', cursive; 
+	font-size: 20px;
+	color: black;
+}
+a:hover .item2{
+	/* Cuando se pasa el mouse por encima del menu */
+	font-family: 'Patrick Hand', cursive;
+	font-size: 20px;
+	text-decoration:bold;
+	color: black;
+	} 
+
+/*Fin seccion Conoce nuestro menú*/
+
+/*Boton para hacer pedidos online*/
+
+.botonPedido{
+	/*Boton de ¡Hacé tu pedido online!*/
+	font-weight:normal;
+	font-size: 30px;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-decoration:bold;
+	text-align: center;
+	color:white;
+	background-color: black;
+	border-radius: 10px;
+	border: solid 1px;
+}
+	
+
+/*Fin boton para hacer pedidos online*/
+
+/*FIN DE LA PAGINA DE INICIO*/
+
+
+/*PAGINA/SECCION SOLUCIONES GASTRONOMICAS*/
+
+/*Grids Soluciones Gastronómicas*/
+
+.grid-soluciones {
+   display: grid;
+   grid-row-gap: 50px;
+   grid-column-gap: 100px;
+}
+
+#divisionSoluciones{
+    grid-template-areas: 
+    "header header header"
+    ". titulo ."
+    "tartas cena tortas"
+    "te pedidos desayunos"
+    "footer footer footer";
+    grid-template-columns: repeat 3(1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+#divisionSoluciones .area.header {grid-area: header; background-color: none; }
+#divisionSoluciones .area.titulo {grid-area: titulo; background-color: none; }
+#divisionSoluciones .area.tartas {grid-area: tartas; background-color:  #FF5757; }
+#divisionSoluciones .area.tortas {grid-area: tortas; background-color:  #FF5757; }
+#divisionSoluciones .area.cena {grid-area: cena; background-color:  #FF5757; }
+#divisionSoluciones .area.te {grid-area: te; background-color:  #FF5757; }
+#divisionSoluciones .area.desayunos {grid-area: desayunos; background-color:  #FF5757; }
+#divisionSoluciones .area.pedidos {grid-area: pedidos; background-color: none; }
+#divisionSoluciones .area.footer {grid-area: footer;  background-color: #FF5757;}
+
+
+.area {
+	display: block;
+	justify-self: center;
+	align-self: start;
+	align-items: start;
+ 	padding: none;
+  	width: auto;
+    margin:10px; 
+}
+
+.area.header {
+    width: auto;
+}
+
+.area.titulo {
+	align-self: center;
+	align-items: center;
+	text-align: center;
+}
+
+.area.pedidos {
+	justify-self: center;
+	align-self: center;
+	align-items: center;
+ 	padding: none;
+  	width: 100%;
+    margin:10px; 
+}
+
+.area.footer {
+	justify-self: center;
+	align-self: center;
+	align-items: start;
+	width: auto;
+}
+.card{
+	background-color: white;
+	transition: 150ms ease-in-out;
+	margin: 3rem;
+}
+.card:hover{
+	transform: scale(1.05);
+	background-color:#FFD18C;
+}
+}
+
+
+_____________________
+
+ .decorado{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: white;
+  padding: none;
+  width: 30%;
+  margin:10px auto;
+  border-radius: 30px;
+ }
+
+p{
+	/*Texto, precios, aclaraciones*/
+	font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 20px;
+	color:black;
+}
+
+h1{
+	font-weight:normal;
+	font-size: 50px;
+    font-family: 'Patrick Hand', cursive;
+	text-align: center;
+	line-height: 20px;
+	color:#FF5757;
+}
+
+h2{
+	font-weight:normal;
+	font-size: 35px;
+    font-family: 'Patrick Hand', cursive;
+	text-align: center;
+	line-height: 20px;
+	color:#FF5757;
+}
+
+h3{
+	font-weight:normal;
+	font-size: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 20px;
+	color:black;
+}
+ /*SECCION CENA CON AMIGOS*/
+h4{
+    font-weight:bold;
+	font-size: 15px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 15px;
+	color:black;
+}
+h5{
+    font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 15px;
+	color:black;
+}
+
+div{
+	font-weight:normal;
+	font-size: 35px;
+    font-family: 'Patrick Hand', cursive;
+	text-align: center;
+	line-height: 20px;
+	color:#FF5757;
+}
+
+
+/*SECCION TARTAS*/
+.lista ul{
+	font-weight:normal;
+	font-size: 15px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 15px;
+	list-style-type: none;
+	color: black
+    align-self: center;
+	padding: auto;
+	background-color: none;
+
+}
+
+.lista li{
+	display: block;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	align-self: center;
+    line-height: 15px;
+    list-style-image: none;
+    color: black
+}
+
+
+.bordesRedondeados {
+  /* para imagenes */
+  border-radius: 50px;
+ }
+
+.footer{
+/* estilo del footer */	
+    font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: white;
+	text-align: center;
+	line-height: auto;
+	background-color: #FF5757;
+	width: auto;
+}
+.footer__ul{
+    color: white;
+}
+
+.footer__li{
+    color: white;
+}
+
+div{
+    font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 20px;
+}
+
+label{
+	font-weight:normal;
+	font-size: 13px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+    line-height: 20px;
+}
+
+.botonesFormulario{
+	/*solo para botones te Enviar y Restablecer*/
+	font-family: 'Patrick Hand', cursive;
+	font-size: 15px;
+	text-decoration:bold;
+	color:#fbf9f2;
+	background-color: #FF5757;
+}
+
+
+/*GRIDS SECCIÓN CONTACTO*/
+.grid-contacto {
+   display: grid;
+   grid-row-gap: none;
+   grid-column-gap: none;
+}
+
+#divisionContacto{
+    grid-template-areas: 
+    "header header"
+    "tituloContacto tituloContacto"
+    "nombre apellido"
+    "celular correo"
+    "consulta consulta"
+    "enviar enviar"
+    "footer footer";
+    grid-template-columns: repeat 2(1fr);
+    grid-template-rows: auto;
+    grid-row-gap: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+#divisionContacto .area.header {grid-area: header; background-color: none; }
+#divisionContacto .area.tituloContacto {grid-area: tituloContacto; background-color: none; }
+#divisionContacto .area.nombre {grid-area: nombre; background-color:  none; }
+#divisionContacto .area.apellido {grid-area: apellido; background-color: none; }
+#divisionContacto .area.celular {grid-area: celular; background-color:  none; }
+#divisionContacto .area.correo {grid-area: correo; background-color:  none; }
+#divisionContacto .area.consulta {grid-area: consulta; background-color:  none; }
+#divisionContacto .area.enviar {grid-area: enviar; background-color:  none; }
+#divisionContacto .area.footer {grid-area: footer;  background-color: #FF5757;}
+
+
+.area {
+	display: block;
+	justify-self: center;
+	align-self: start;
+	align-items: start;
+ 	padding: none;
+  	width: auto;
+    margin:10px; 
+}
+
+.area.header {
+	justify-self: center;
+	align-self: center;
+	align-items: center;
+	width: auto;
+}
+
+.area.tituloContacto {
+	align-self: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+.area.footer {
+	justify-self: center;
+	align-self: center;
+	align-items: center;
+	width: auto;
+}
+
+
+
+/*GRIDS SECCIÓN PEDIDOS*/
+.grid-pedidos {
+   display: grid;
+   grid-row-gap: 100px;
+   grid-column-gap: none;
+}
+
+#divisionPedidos{
+    grid-template-areas: 
+    "header header"
+    "titulo titulo"
+    "nombre apellido"
+    "celular correo"
+    "pedido aclaracion"
+    "enviar enviar"
+    "footer footer";
+    grid-template-columns: repeat 2(1fr);
+    grid-template-rows: auto;
+    grid-row-gap: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+#divisionPedidos .area.header {grid-area: header; background-color: none; }
+#divisionPedidos .area.titulo {grid-area: titulo; background-color: none; }
+#divisionPedidos .area.nombre {grid-area: nombre; background-color:  none; }
+#divisionPedidos .area.apellido {grid-area: apellido; background-color: none; }
+#divisionPedidos .area.celular {grid-area: celular; background-color:  none; }
+#divisionPedidos .area.correo {grid-area: correo; background-color:  none; }
+#divisionPedidos .area.pedido {grid-area: pedido; background-color:  none; }
+#divisionPedidos .area.aclaracion {grid-area: aclaracion; background-color:  none; }
+#divisionPedidos .area.enviar {grid-area: enviar; background-color:  none; }
+#divisionPedidos .area.footer {grid-area: footer;  background-color: #FF5757;}
+
+
+.area {
+	display: block;
+	justify-self: center;
+	align-self: start;
+	align-items: start;
+ 	padding: none;
+  	width: auto;
+    margin:10px; 
+}
+
+.area.header {
+	justify-self: center;
+	align-self: center;
+	align-items: center;
+	width: auto;
+}
+
+.area.titulo{
+	align-self: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+.area.footer {
+	justify-self: center;
+	align-self: center;
+	align-items: center;
+	width: auto;
+}
+
+
+
+/*Mobile First*/
+
+/*XS*/
+@media only screen and (min-width: 0px) and (max-width: 767px){
+	
+.flex-container { 
+  	display: flex;
+ 	flex-direction: column;
+  	flex-wrap: column;
+ 	justify-content: stretch;
+  	align-content: stretch;
+ 	align-items: stretch; 
+ 	background-color: #FF5757;
+ 	padding: none;
+  	width: 100%;
+  	margin: 10px;
+}
+
+h1{
+	font-weight:normal;
+	font-size: 30px;
+    font-family: 'Patrick Hand', cursive;
+	text-align: center;
+	line-height: 20px;
+	color:#FF5757;
+}
+
+h2{
+	font-weight:bold;
+	font-size: 20px;
+    font-family: 'Patrick Hand', cursive;
+	text-align: center;
+	line-height: 20px;
+	color:#FF5757;
+}
+
+h3{
+	font-weight:bold;
+	font-size: 10px;
+    font-family: 'Patrick Hand', cursive;
+	text-align: center;
+	line-height: 20px;
+	color:#FF5757;
+}
+
+h4{
+    font-weight:bold;
+	font-size: 10px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 15px;
+}
+h5{
+    font-weight:normal;
+	font-size: 10px;
+    font-family: 'Kumbh Sans', sans-serif;
+	text-align: center;
+	line-height: 15px;
+}
+
+ .decorado{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: #fbf8f1;
+  padding: none;
+  width: 60%;
+  margin:10px auto;
+  border-radius: 30px;
+ }
+
+
+ul li:hover ul {
+	/*Cuando se pasa el mouse por encima de los items de la lista desplegable*/
+	display: none;
+}
+
+#divisionAreas{
+    grid-template-areas: 
+    "destacados destacados destacados"
+    "menu menu menu"
+    "pedidos pedidos pedidos"
+    "footer footer footer";
+    grid-template-columns: auto;
+    grid-template-rows: 100px 100px;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-menu { 
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: none;
+  padding: none;
+  width: 100%;
+}
+
+.footer{
+/* estilo del footer */	
+    font-weight:normal;
+	font-size: 10px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: white;
+	text-align: center;
+	line-height: auto;
+	background-color: #FF5757;
+	width: auto;
+}
+
+}
+
+
+
+@media only screen and (max-width:768px){
+
+.flex-menu { 
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: none;
+  padding: none;
+  width: 100%;
+}
+
+
+	  }
+
+/*LG*/
+@media only screen and (min-width: 1240px){
+	  
+
+.flex-menu { 
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
+  align-content: center;
+  align-items: center; 
+  background-color: none;
+  padding: none;
+  width: 100%;
+}
+
+
+    }
+
+
+
+  /* SALTOS: */
+
+
+/*MD*/
+
+@media only screen and (min-width: 960px) and (max-width:1239px){}
+
+
+/*SM*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px){}
+
+
+{}
