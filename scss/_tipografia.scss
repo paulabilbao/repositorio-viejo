@@ -1,0 +1,32 @@
+/*variables tipograficas*/
+$title-font:'Patrick Hand', cursive;
+$title-color:#FF5757;
+$font-family:'Kumbh Sans', sans-serif;
+$h2:'Patrick Hand', cursive;
+$h3:'Kumbh Sans', sans-serif;
+$h4: 'Kumbh Sans', sans-serif;
+$h5: 'Kumbh Sans', sans-serif;
+$p:'Kumbh Sans', sans-serif;
+
+/*INDEX*/
+
+h1{
+    font: $title-font;
+    color: #FF5757;
+ }
+ 
+ h2{
+     font: $h2;
+ }
+ 
+ h3{
+     font:$h3;
+ }
+ 
+ h4{
+     font:$h4;
+ }
+ 
+ h5{
+     font:$h5;
+ }
